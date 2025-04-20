@@ -17,5 +17,9 @@ import cors from 'cors';
         res.status(200).json({ key: process.env.RAZORPAY_KEY_ID });
 
  })
+ app.get('/', (req, res) => {
+        res.status(200).json({ message: "Server is running" });
+
+ })
 
  export default app;
