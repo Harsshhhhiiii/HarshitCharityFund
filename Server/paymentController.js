@@ -49,7 +49,7 @@ export const paymentVerification = async (req, res) => {
             console.log("Payment verified and saved:", paymentDetails);
        
 
-        return res.redirect(`http://localhost:3000/payment/${razorpay_payment_id}`);
+        return res.redirect(`https://harshit-charity-fund.vercel.app/payment/${razorpay_payment_id}`);
 
         } else {
             return res.status(200).json({ 
