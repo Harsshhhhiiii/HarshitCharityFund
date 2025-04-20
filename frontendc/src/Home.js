@@ -32,10 +32,10 @@ const Home = () => {
     
   const checkoutHandler = async (amount) => {
     try {
-      const dataKey= await axios.get('http://localhost:5000/api/getkeys'); 
+      const dataKey= await axios.get('  https://harshitcharityfund.onrender.com/api/getkeys'); 
       const key = dataKey.data;  
       
-      const response = await axios.post('http://localhost:5000/api/checkout', { amount });
+      const response = await axios.post('  https://harshitcharityfund.onrender.com/api/checkout', { amount });
       
 
         const options = {
@@ -45,7 +45,7 @@ const Home = () => {
             name: 'Harshit Charity Organization',
             description: 'Thank you for your contribution!',
             order_id: response.data.id,
-            callback_url: 'http://localhost:5000/api/paymentverification',
+            callback_url: '  https://harshitcharityfund.onrender.com/api/paymentverification',
             prefill: {
                 name: 'Harshit Charity Fund',
                 email:  'appy.dhoni@gmail.com',
